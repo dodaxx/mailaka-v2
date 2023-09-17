@@ -19,11 +19,15 @@ defineProps({
 </template>
 <style scoped lang="scss">
 .app-grid {
-  @apply grid grid-cols-2 gap-4;
+  @apply grid grid-cols-4 gap-4;
+  padding: 0 12px;
+  grid-template-rows: max-content;
 
-  @screen xl {
-    @apply grid-cols-12 gap-4;
+  @screen lg {
+    @apply grid grid-cols-12 gap-4;
     padding: 0 20px;
+    grid-template-rows: auto;
+
   }
 }
 </style>

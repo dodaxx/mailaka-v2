@@ -14,15 +14,25 @@
 </template>
 <style scoped lang="scss">
 .navbar {
-  @apply fixed w-full flex justify-between items-center pl-4 pr-4;
+  @apply fixed w-full flex justify-between items-center p-4 pl-4 pr-4;
+
+  &-logo {
+    &::v-deep(svg) {
+      width: 36px;
+      height: 36px;
+    }
+  }
 
   &-navlinks {
     ul {
       @apply flex gap-6;
-      font-size: 24px;
+      font-weight: 500;
+      color: white;
+      font-size: 16px;
 
-      li {
-        font-weight: 500;
+      @screen xl {
+        font-size: 20px;
+
       }
     }
   }
