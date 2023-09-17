@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'code-bold';
+  src: url('@/assets/fonts/Code-Pro-Bold-LC.woff') format('woff');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'code-medium';
+  src: url('@/assets/fonts/Code-Pro-LC.woff') format('woff');
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --blue: #161E25;
+}
