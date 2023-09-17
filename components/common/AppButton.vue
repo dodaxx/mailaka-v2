@@ -20,6 +20,7 @@ defineProps({
   border-radius: 8px;
   padding: 8px;
   font-size: 16px;
+  cursor: none;
 
   @screen xl {
     font-size: 24px;
@@ -30,6 +31,11 @@ defineProps({
   &--white {
     border: 1px solid white;
     color: white;
+
+    &:hover {
+      background-color: white;
+      color: #01091e;
+    }
   }
 }
 </style>

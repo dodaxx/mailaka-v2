@@ -17,7 +17,12 @@
     "tailwindcss": "^3.3.3"
   },
   "dependencies": {
+    "@pinia/nuxt": "^0.4.11",
     "gsap": "^3.12.2",
+    "pinia": "^2.1.6",
     "sass": "^1.64.1"
+  },
+  "overrides": {
+    "vue": "latest"
   }
 }

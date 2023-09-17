@@ -1,5 +1,10 @@
 <script setup>
 import { gsap } from 'gsap';
+import { useCursor } from '~/store/useCursor'
+
+const store = useCursor();
+
+
 
 onMounted(() => {
   const descriptionWord = document.querySelectorAll('.hero-info__description > p > span');
@@ -43,6 +48,7 @@ onMounted(() => {
 })
 
 
+
 </script>
 <template>
   <CommonAppGrid grid-class="hero" tag="section">
@@ -58,7 +64,9 @@ onMounted(() => {
           </p>
         </div>
         <div class="hero-info__button">
-          <CommonAppButton text="Parlez de vos projets" variant="white" />
+          <CommonAppButton text="Parlez de vos projets" variant="white"
+            @mouseenter="store.handleChangeFormTextCursor('full', '')"
+            @mouseleave="store.handleChangeFormTextCursor('', 'Visitez')" />
         </div>
       </div>
     </div>
