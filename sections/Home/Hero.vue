@@ -29,7 +29,7 @@
 </template>
 <style scoped lang="scss">
 .hero {
-  @apply flex flex-col justify-center gap-10;
+  @apply flex flex-col justify-start gap-10;
   height: 100vh;
   width: 100%;
   background: radial-gradient(#021B5B, #01091e);
