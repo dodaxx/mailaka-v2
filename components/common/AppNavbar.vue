@@ -1,5 +1,9 @@
 <script setup>
 import gsap from 'gsap'
+import { useCursor } from '~/store/useCursor'
+
+const store = useCursor();
+
 
 onMounted(() => {
   const tl = gsap.timeline();
@@ -19,7 +23,8 @@ onMounted(() => {
 })
 </script>
 <template>
-  <nav class="navbar">
+  <nav class="navbar" @mouseenter="store.handleChangeFormTextCursor('mini', '')"
+    @mouseleave="store.handleChangeFormTextCursor('', 'Visitez')">
     <div class="navbar-logo">
       <IconsLogoIcon />
     </div>
@@ -55,6 +60,15 @@ onMounted(() => {
   &-logo {
     transform: scale(0);
 
+    &:hover {
+      transition: 0.2s;
+      background: rgba(255, 255, 255, 0.432);
+      border-radius: 4px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(3.1px);
+      border: 1px solid rgba(255, 255, 255, 0.144);
+    }
+
     &::v-deep(svg) {
       width: 36px;
       height: 36px;
@@ -66,7 +80,6 @@ onMounted(() => {
     ul {
       @apply flex items-center gap-5;
       font-weight: 500;
-      color: white;
       font-size: 16px;
       transform: translateY(2px);
 
@@ -77,6 +90,12 @@ onMounted(() => {
 
       li {
         transform: scale(0);
+        color: white;
+
+        &:hover {
+          transition: 0.2s;
+          color: #01091e;
+        }
       }
     }
   }

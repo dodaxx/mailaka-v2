@@ -31,6 +31,7 @@ onMounted(() => {
 <template>
   <div :class="`cursor cursor--${store.formCursor}`">
     <p>{{ store.textCusor }}</p>
+    <div class="pointer" v-if="store.formCursor === 'mini'"></div>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -62,6 +63,22 @@ onMounted(() => {
     }
   }
 
+  &--mini {
+    margin-top: -25px;
+    margin-left: -20px;
+    width: 45px;
+    height: 45px;
+    /* transition: 0.1s; */
+    border: 1px solid white;
+  }
+
+  .pointer {
+    @apply absolute left-1/2 -translate-x-1/2;
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    border-radius: 50%;
+  }
 
   p {
     @screen xl {
