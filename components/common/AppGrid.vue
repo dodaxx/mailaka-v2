@@ -1,15 +1,29 @@
+<script setup>
+
+defineProps({
+  gridClass: {
+    type: String,
+    required: true
+  },
+  tag: {
+    stype: String,
+    default: 'div'
+  }
+})
+
+</script>
 <template>
-  <div class="app-grid">
+  <component :is="tag" :class="`app-grid ${gridClass}`">
     <slot />
-  </div>
+  </component>
 </template>
 <style scoped lang="scss">
 .app-grid {
   @apply grid grid-cols-2 gap-4;
 
   @screen xl {
-    @apply grid-cols-12 gap-6;
-    padding: 0 50px;
+    @apply grid-cols-12 gap-4;
+    padding: 0 20px;
   }
 }
 </style>

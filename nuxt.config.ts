@@ -17,5 +17,13 @@ export default defineNuxtConfig({
       path: '~/sections',
       extensions: ['.vue'],
     },
-  ]
+  ],
+  head: {
+    link: [
+      {
+        rel: 'stylesheet',
+        href: "https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500&family=Roboto:wght@400;500;700&display=swap"
+      }
+    ]
+  }
 })
