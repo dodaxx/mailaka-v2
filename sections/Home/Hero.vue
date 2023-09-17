@@ -34,6 +34,12 @@ onMounted(() => {
     duration: 0.5
   })
 
+  gsap.to(['.hero-avatar__wrapper .images-top img', '.hero-avatar__wrapper .images-bottom img'], {
+    rotation: 0 * 0,
+    ease: "Elastic.easeOut",
+    delay: 2,
+    duration: 2
+  })
 })
 
 
@@ -185,6 +191,7 @@ onMounted(() => {
           width: 85px;
           height: 85px;
           border-radius: 6px;
+          transform: rotate(180deg);
 
           @screen lg {
             width: 155px;
@@ -200,6 +207,7 @@ onMounted(() => {
           width: 85px;
           height: 85px;
           border-radius: 6px;
+          transform: rotate(180deg);
 
           @screen lg {
             width: 155px;
