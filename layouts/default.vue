@@ -1,7 +1,7 @@
 <template>
   <div>
-    <CommonAppNavbar />
-    <CommonAppCursor />
+    <LazyCommonAppNavbar />
+    <LazyCommonAppCursor />
     <slot />
   </div>
 </template>
