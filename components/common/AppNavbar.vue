@@ -26,11 +26,15 @@ onMounted(() => {
   <nav class="navbar" @mouseenter="store.handleChangeFormTextCursor('mini', '')"
     @mouseleave="store.handleChangeFormTextCursor('', 'Visitez')">
     <div class="navbar-logo">
-      <IconsLogoIcon />
+      <NuxtLink href="/">
+        <IconsLogoIcon />
+      </NuxtLink>
     </div>
     <div class="navbar-navlinks">
       <ul>
-        <li>Skills</li>
+        <li>
+          <NuxtLink href="/skills">Skills</NuxtLink>
+        </li>
         <li>Projets</li>
       </ul>
     </div>
