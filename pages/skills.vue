@@ -1,14 +1,14 @@
-<script setup></script>
+<script setup>
+</script>
 <template>
-  <CommonAppGrid tag="section" grid-class="skills">
-    <div class="skills-wrapper"></div>
-  </CommonAppGrid>
+  <main>
+    <LazySkillsHero />
+  </main>
 </template>
-
 <style lang="scss" scoped>
-.skills {
-  height: 100vh;
+main {
   width: 100%;
-  background: radial-gradient(#021B5B, #01091e);
 }
 </style>
+
+
